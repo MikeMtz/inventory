@@ -18,11 +18,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-##API
+## API
 API works in LUMEN. You must create a database and set the DB configuration in api/.env (If not exist, copy .env.example)
 
-#ENVIRONMENT
+## ENVIRONMENT
 You must change the value of api in environment constant for server communication
 
-##THEME
+## THEME
 You can change the app theme color configuration in styles.css
