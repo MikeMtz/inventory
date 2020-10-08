@@ -1,0 +1,51 @@
+<div class="row justify-content-md-center">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                TECHNOGI
+            </div>
+            <div class="card-body row">
+                <h5 class="card-title col-6">Inventario de producto</h5>
+                <div class="col-6 text-right">
+                    <a type="button" class="btn btn-outline-dark btn-sm"
+                       href="list">Ver inventario</a>
+                </div>
+                <div class="col-md-8">
+                    <form [formGroup]="inventoryFormGroup" #formInventory name="formInventory" id="formInventory" (submit)="onSave()">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label><span class="text-danger">*</span> Nombre</label>
+                                <input type="text" class="form-control" formControlName="name" name="name"
+                                       placeholder="Nombre del producto" [(ngModel)]="inventory.name" required>
+                            </div>
+                            <div class="form-group col-12">
+                                <label><span class="text-danger">*</span> Costo ($)</label>
+                                <input type="number" class="form-control" formControlName="cost" name="cost"
+                                       min="0" [(ngModel)]="inventory.cost" (change)="calculatePrice()">
+                            </div>
+                            <div class="form-group col-12">
+                                <label>IVA (16%)</label>
+                                <input type="number" class="form-control" formControlName="iva" name="iva"
+                                       min="0" [(ngModel)]="inventory.iva" readonly>
+                            </div>
+                            <div class="form-group col-12">
+                                <label><span class="text-danger">*</span> Precio ($)</label>
+                                <input type="number" class="form-control" formControlName="price" name="price"
+                                       min="0" [(ngModel)]="inventory.price" (change)="calculateCost()">
+                            </div>
+                            <small class="col-12 m-2">(<span class="text-danger">*</span>) Información requerida</small>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary" [disabled]="submitted">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                    </svg> Agregar a inventario
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

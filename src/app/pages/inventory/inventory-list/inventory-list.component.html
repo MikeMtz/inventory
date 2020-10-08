@@ -1,0 +1,45 @@
+<div class="row justify-content-md-center">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                TECHNOGI
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Costo</th>
+                                <th>IVA</th>
+                                <th>Precio</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let in of inventory">
+                                <td>{{in.name}}</td>
+                                <td>{{in.cost}}</td>
+                                <td>{{in.iva}}</td>
+                                <td>{{in.price}}</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Totales:</th>
+                                <th>{{total_cost}}</th>
+                                <th>{{total_iva}}</th>
+                                <th>{{total_price}}</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="col-12">
+                        <a href="add" class="btn btn-outline-danger" target="_self">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
