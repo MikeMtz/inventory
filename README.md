@@ -8,6 +8,9 @@ Run 'npm i' to install dependencies
 ## LUMEN
 Run 'cd api/ && composer i' to install LUMEN dependencies (php => 7.3)
 
+## MIGRATIONS
+Run 'cd api/ && php artisan migrate' to create the inventory table
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
